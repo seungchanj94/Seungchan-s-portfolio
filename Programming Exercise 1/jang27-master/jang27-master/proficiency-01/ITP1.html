@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ITP-1</title>
+</head>
+<body>
+	<h1> Seungchan Jang / jang27</h1>
+    <p>Greeting Message: <span id="datetime"></span></p>
+
+	
+    <script>
+
+	<!--to get date and to store time from the real-time Date -->
+	<!-- from the "time", to get hour with "hour"-->
+    var time = new Date()
+    var hour = time.getHours()
+	<!--var min = time.getMinutes()>
+	<!--var s = time.getSeconds()>
+	<!--var clock = document.write(hour + ":" + min + ":" + s);>
+	
+
+    <!--if (clock >= "5:45:0" && clock < "12:0:0") {-->
+        <!--document.getElementById("datetime").innerHTML = "Good Morning";-->
+    <!--} else if (clock >= "12:0:0" && clock < "18:0:0") {-->
+        <!--document.getElementById("datetime").innerHTML = "Good Afternoon";-->
+    <!--} else {-->
+        <!--document.getElementById("datetime").innerHTML = "Good Evening!";-->
+    <!--}-->
+	
+	<!-- For this comment above, I tried to store into "clock" with formating HH:mm:ss. Then, I tried to make if statement  to compare with time that I store into "clcok" with "5:45:00" to show the greeting message. -->
+	<!-- However, it does not work. Acutally, it worked at the very beginning when I visit to the office hour. Right now, the minute does not work.-->
+	
+	
+	<!-- At least, I figure out how to get hour and minute and second. From getting "hour", I make if statement to show greeting message according to the hour below-->
+	if (hour >= 5 && hour < 12) { 
+        document.getElementById("datetime").innerHTML = "Good Morning";
+    } else if (hour >= 12 && hour < 18) {
+        document.getElementById("datetime").innerHTML = "Good Afternoon";
+    } else {
+        document.getElementById("datetime").innerHTML = "Good Evening!";
+    }
+	
+
+	</script>
+
+</body>
+</html>

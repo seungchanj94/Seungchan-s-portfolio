@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ITP 2</title>
+<meta charset="utf-8">
+
+<!--- This is CSS in HTML to support the calculator design--->
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		.button {
+			width: 75px;
+			height: 50px;
+			font-size: 25px;
+			margin: 2px;
+			cursor: pointer;
+			border: none;
+		}
+		
+		<!-- in order to show the result more clearly, I used this display class. -->
+		.display {
+				display: block;
+				margin: 15px auto;
+				height: 42px;
+				width: 174px;
+				padding: 0 10px;
+				border-radius: 4px;
+				border-top: 2px solid #C1C1C1;
+				border-right: 2px solid #C1C1C1;
+				border-bottom: 2px solid #FFF;
+				border-left: 2px solid #FFF;
+				background-color: #FFF;
+				font-size: 28px;
+				color: #666;
+				text-align: right;
+				font-weight: 400;
+		}
+		.main {
+			width: 245px;
+			height: 250px;
+			background-color: #efecec;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%)translateY(-50%);
+			border: 1px;
+		}
+	</style>
+</head>
+<body>
+<h1> Seungchan Jang / jang27 </h1>
+
+<!-- This is main body for making calculator-->
+	<div class="main">
+		<!-- This form can show the result of the calculator-->
+		<form name="calculator">
+			<input type = "text" name = "display" class = "display" readonly>
+		<!-- All buttons have certain value and have functions for calculating the input numbers. -->
+		<table>	
+			<tr>
+				<td><input type = "button" class = "button" value = "2" onclick = "calculator.display.value += '2'"></td>
+				<td><input type = "button" class = "button" value = "4" onclick = "calculator.display.value += '4'"></td>
+				<td><input type = "button" class = "button" value = "clr" onclick = "calculator.display.value = ''"></td>
+			</tr>
+			
+			<tr>
+				<td><input type = "button" class = "button" value = "6" onclick = "calculator.display.value += '6'"></td>
+				<td><input type = "button" class = "button" value = "8" onclick = "calculator.display.value += '8'"></td>
+				<td><input type = "button" class = "button" value = "+" onclick = "calculator.display.value += '+'"></td>
+			</tr>
+			<!-- "Equal to" button is special for making result. Therefore, I used this coding. -->
+			<tr>
+				<td><input type = "button" class = "button" value = "0" onclick = "calculator.display.value += '0'"></td>
+				<td><input type = "button" class = "button" value = "=" onclick = "calculator.display.value = eval(calculator.display.value)"></td>
+				<td><input type = "button" class = "button" value = "÷" onclick = "calculator.display.value += '/'"></td>
+			</tr>
+		</table>
+		</form>
+
+	</div>
+
+</body>
+</html>
