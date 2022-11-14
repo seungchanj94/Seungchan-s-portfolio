@@ -26,9 +26,9 @@ You can find information on our team, our roles, and our training plan(s) below.
 Main Role: Data Analyst & Web developer
 
 <ul>
-<li>Training item 1: Through the CodeAcademy, I will learn HTML 5 in order to program the basic structure of the whole website and SQL to understand storing the database. ({two hours per week})</li>
-<li>Training item 2: Learning CSS to make simple and clear design in order to make User friendly. ({an hour per week})</li>
-<li>Training item 3: Learning python and GUI to connect with Google account or to build our own log-in system to collect all users’ information .  ({3 hours per week})</li>
+<li>Training item 1: Through the CodeAcademy, I will learn python and HTML 5 in order to program the basic structure of the whole website and SQL to set up storing the database. ({two hours per week})</li>
+<li>Training item 2: Learning CSS to make simple UX/UI and to clear design in order to make User friendly. ({an hour per week})</li>
+<li>Training item 3: Learning python and GUI to connect with Google account Api or to build our own log-in system to collect all users’ information .  ({3 hours per week})</li>
 <li>Training item 4: In order to access website through the smartphone and collect all real-time data to transfer for posting immediately, I will learn C# and real-time APi to make mobile friendly website. ({4 - 5 hours per week})</li>
 
 </ul>
