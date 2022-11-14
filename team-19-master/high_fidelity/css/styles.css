@@ -1,0 +1,368 @@
+/* apply a natural box layout model to all elements */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* RWD tag to visually indicate media query breaks */
+#tag {
+position: fixed;
+top: 0;
+right: 0;
+width: 25px;
+height: 25px;
+background-color: #CC0000;
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* 
+  GENERAL
+*/
+body {
+margin: 0;
+background-color: #fff;
+}
+
+/* 
+  TYPOGRAPHY
+*/
+h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption {
+  font-family: 'PT Sans', sans-serif;
+  /* also adjust margin and line-height */
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h1 span {
+
+}
+
+h2 {
+  
+}
+
+h3 {
+  letter-spacing: 2px;
+
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Navigation */
+.openbtn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: rgb(255, 255, 255);
+  font-family: 'PT Sans', sans-serif;
+}
+.openbtn:hover {
+  color: grey;
+}
+.menu-text {
+  font-size: 11px;
+  display: block;
+}
+
+/* The side navigation menu */
+.all-over-bkg {
+  display: none;
+}
+
+.is-visible {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+  display: block;
+}
+
+#mySidenav {
+  z-index: 10000;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #00000017;  
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: grey;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+main {
+  transition: margin-left .5s;
+  padding: 0;
+}
+/*
+  HEADER
+*/
+.menu_section{
+  color: #fff;
+  background-color: #000000;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+
+.logo img{
+  width: 500px;
+
+}
+
+/*
+Side  Section
+*/
+.side_section{
+  border-style: solid;
+  border-color: #e90000;
+  border-width: 5px;
+  padding-left: 50px;
+ 
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+
+}
+.container_sid {
+
+
+}
+.profile img{
+  width: 200px;
+}
+.profile_account img{
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calendar img{
+  width: 300px;
+}
+/*
+Body
+*/
+
+.container2{
+  display: flex;
+  flex-direction: row;
+}
+.container_main{
+  border-style: solid;
+  border-color: rgb(34, 204, 0);
+  padding-left: 10px;
+  padding-right: 50px;
+}
+header h1, .container {
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+header h1 {
+  padding: 2.0em 0em;
+}
+header a{
+  color: #ffffff;
+  text-decoration: none;
+}
+header a:hover{
+  color: #ffffffec;
+}
+
+.manage_team_table{
+  border-style: solid;
+  text-align: center;
+}
+
+
+#mapid { 
+  /* adjust map height in the media queries  */
+  height: 80px; 
+  width: 100px;
+  
+}
+
+/* Search Bar*/
+
+
+
+
+article {
+  
+}
+
+.first_article{
+ background-color: #fefefe;
+ padding: 1.0em 0.5em;
+
+ 
+}
+
+.second_article{
+  background-color: #edebec;
+  padding: 1.0em 0.5em;
+  
+}
+
+.button_first{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.third_article{
+  background-color: #fefefe;
+  padding: 1.0em 0.5em;
+}
+.challenges-img{
+  height: 300px;
+
+}
+
+.flex_2{
+  display: flex;
+  flex-direction: column;
+}
+.flex_3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.article_3{
+  max-width: 300px;
+  
+}
+
+
+footer {
+  padding: 2.0em;
+  background-color: #2b2b2b;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 16px 0.5em;
+}
+
+/*
+  BUTTONS AND LINKS
+*/
+.button {
+  background-color:  #99000093;
+  border: 3px solid  #99000093;
+  border-radius: 20px;
+  color: white;
+  padding: 0.5em 1.0em;
+  margin: 1.0em 2.0em 0 0;
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 1px;
+  max-height: 45px;
+  transition: background-color .2s ease-out,color .2s ease-out,border-color .18s ease-out;
+}
+
+.button:hover {
+  background-color: transparent;
+  color:  #990000;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#button_1{
+  text-align: center;
+}
+
+/*
+  MEDIA QUERIES
+*/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  #tag { background-color: #FF9900; }
+  h1{
+      font-size: 36px;
+  }
+  #mapid { 
+      height: 240px; 
+      width: 300px;
+  }
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  #tag { background-color: #00AA88; }
+  h1{
+      font-size: 42px;
+  }
+  #mapid { 
+      height: 360px; 
+      width: 400px;
+  }
+  .racing-stripes {
+      height: 60px;  
+      
+  }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  #tag { background-color: #674EA7; }
+  #mapid { 
+      height: 500px; 
+      width: 600px;
+  }    
+
+}

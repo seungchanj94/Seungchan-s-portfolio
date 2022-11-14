@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Capstone Project
+    High Fidelity Mockups
+    Team 19
+    12/15/2019
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inviter</title>
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Leaflet: OK to use either downloaded resources or CDN -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+    <!-- Font Awesome-->
+	<script src="https://kit.fontawesome.com/3680edfbdb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="tag"></div>
+    <section class="menu_section">
+        <!-- NAVIGATION -->
+        <nav id="mySidenav" class="sidenav">
+            <a class="closebtn">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="account.html">Account</a>
+            <a href="host.html">Host Match</a>
+            <a href="team.html">Team</a>
+			<a href="matchmaking.html">MatchMaking</a>
+            <a href="#">Sign Out</a>
+        </nav>
+
+        <div class="openbtn">
+            <i class="fas fa-bars fa-2x"></i> <!--Menu Icon-->
+            <span class="menu-text">menu</span>
+        </div>
+        <div class="all-over-bkg"></div>
+        <header>
+            <!--
+            <figure class="logo">
+                <img src="images/YounghwaNa-white-high-res.png" alt="Young Hwan Na Logo">
+                <figcaption class="sr-only">YoungHwan Na Logo</figcaption>
+            </figure>
+            -->
+            
+            <a href="index.html"><h1>Inviter</h1></a>		
+            
+        </header>
+    </section>
+
+    <div class="container2">
+        <div class="side_section">
+            <section class="container_side">
+                <article>
+                    <figure class="profile">
+                        <img src="images/YoungNa.png" alt="Profile Photo">
+                        <figcaption>Young Na</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section class="container_side">
+                <article>
+                    <p>Skills / Hobbies
+                    </p>
+                    <ul>
+                        <li>Soccer</li>
+                        <li>Badminton</li>
+                        <li>Tennis</li>
+                        <li>Basketball</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="container_side">
+                <article>
+                    <p>Member / Team
+                    </p>
+                    <ul>
+                        <li>IU Badminton Club</li>
+                        <li>KSC</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="container_side">
+                <article>
+                    <p>Upcoming Match</p>
+                    <figure class="calendar">
+                        <img src="images/calendar.PNG" alt="Calendar">
+                    </figure>
+                </article>
+            </section>
+        </div>
+        <!--Main Body Content-->
+            <section class="container_main">
+                <article>
+                    <h1>Find Match</h1> 
+                    <div class="topnav">                          
+                        <input type="text" placeholder="Search..">
+                    </div>
+                    <div id="mapid"></div>
+                </article>
+            </section>
+            <section class="container_main">
+                <article>
+                    <h3>Backstreet Boy Soccer Match</h3>
+                    <p>Host : James Wellington</p>
+                    <p>Date : 28 August 2019</p>
+                    <p>Location: Woodlawn Field,<br>
+                    Bloomington , indiana , 47402</p>
+                    <p>Discription COME join us at kamokase
+                            stadium,we will play soccer all -day long so
+                            come come come!
+                            </p>
+                    <div class="button_first">
+                        <a class="button" href="join.html">Join</a>
+                        <a class="button" href="messageHost.html">Message Host</a> 
+                    </div>
+                </article>
+            </section>
+            
+    </div>
+    
+    <footer>
+        <a href="#"><i class="fab fa-facebook fa-2x" style="color:rgb(255, 255, 255);"></i></a>
+
+        <a href="#"><i class="fab fa-twitter fa-2x" style="color:rgb(255, 255, 255);"></i></a>
+
+        <a href="#"><i class="fab fa-instagram fa-2x" style="color:rgb(255, 255, 255);"></i></a>
+
+    </footer>
+    <!-- JAVASCRIPT -->
+    
+    <script src="js/nav.js"></script>
+    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+ 		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		 crossorigin="">
+		 </script>
+<script src="js/nav.js"></script>
+<script src="js/leaflet.js"></script>
+
+</body>
+</html>

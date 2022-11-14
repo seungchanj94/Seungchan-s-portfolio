@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign Up</title>
+	<!-- Bootstrape css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Bootstrape javascript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<div class="container" style="margin-top:100px">
+		<div class="row justify-content-center">
+			<div class="col-md-3" align="center">
+
+
+				<h1>Sign Up</h1>
+
+
+				<form action="register.php" method="post" autocomplete="off">
+					<div class="form-group">
+						<input type="text" name="username" placeholder="Username" id="username" required>
+						<input type="text" name="firstname" placeholder="Firstname" id="firstname">
+						<input type="text" name="lastname" placeholder="Lastname" id="lastname">
+						<br>
+					</div>
+
+					<label for="password">
+						<i class="fas fa-lock"></i>
+					</label>
+					<input type="password" name="password" placeholder="Password" id="password" required>
+					<input type="password" name="repassword" placeholder="Re-Password" id="repassword" required>
+					<br>
+					<br>
+					<label for="email">
+						<i class="fas fa-envelope"></i>
+					</label>
+					<input type="email" name="email" placeholder="Email" id="email" required>
+					<br>
+					<br>
+					<button type="submit" class="btn btn-primary">Register</button>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
