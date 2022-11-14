@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Activity Log Info</title>
+<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="resources/css/common.css">
+<style>
+	table {
+		width: 100%;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<a style="text-decoration: none; color: black;" href="entry.html">
+				<h1 style="margin-right: 100px; margin-left: 20px;">Time Tracking System</h1>
+			</a>
+			<!-- Menu bar-->
+			<nav class="nav">
+				<a class="col-xs-1 menu-link" href="create.html">Create Employee</a> <a
+					class="col-xs-1 menu-link" href="manage_employee.html">Manage Employee</a> <a
+					class="col-xs-1 menu-link" href="activity_log_info.html">Activity Log Info</a> <a
+					class="col-xs-1 menu-link" href="select_activity_log.html">Select Activity Log</a>
+			</nav>
+		</div>
+		<hr class="bar"></hr>
+		<div>
+			<select id="employee-select" name="employeeId">
+				<option value="">Employee Select</option>
+				<!-- It can be repeated-->
+				<!-- option value name will be changed as setting up a database-->
+			</select>
+			<button id="create-employee" name="create" style="margin-left: 10px;">Create</button>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th class="table-content">
+						<h4>ID</h4>
+					</th>
+					<th class="table-content">
+						<h4>Start Datetime</h4>
+					</th>
+					<th class="table-content">
+						<h4>End Datetime</h4>
+					</th>
+					<th class="table-content">
+						<h4>Note</h4>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="activity-list-container">
+			</tbody>
+		</table>
+	</div>
+	
+	<script type="text/javascript" src="resources/util/jquery-3.4.1.min.js"></script>
+	<script src="resources/util/handlebars-v4.1.2.js"></script>
+	<script type="text/javascript" src="resources/js/activity_select.js"></script>
+	
+	<script type="employee-template" id="employeeSelectTemplate">
+		<option value="{{id}}">{{lastName}} {{firstName}}</option> 
+	</script>
+	
+	<script type="activity-template" id="activityTemplate">
+		<tr class="activity-tr">
+			<td class="activity-tr">{{activityId}}</td>
+			<td class="activity-tr">{{startDatetime}}</td>
+			<td class="activity-tr">{{endDatetime}}</td>
+			<td class="activity-tr">{{note}}</td>
+		</tr>
+	</script>
+</body>
+</html>

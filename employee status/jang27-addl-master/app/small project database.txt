@@ -1,0 +1,127 @@
+login as: jang27
+Keyboard-interactive authentication prompts from server:
+| Password:
+| Duo two-factor login for jang27
+|
+| Enter a passcode or select one of the following options:
+|
+|  1. Duo Push to XXX-XXX-8442
+|  2. Phone call to XXX-XXX-8442
+|  3. SMS passcodes to XXX-XXX-8442
+|
+| Passcode or option (1-3): 1
+End of keyboard-interactive prompts from server
+Success. Logging you in...
+Last login: Wed May 13 07:25:14 2020 from 156.56.227.138
+
+
+********************************************************************************
+** Indiana University Luddy School of Informatics, Computing, and Engineering **
+**                    ** For Authorized Use Only **                           **
+********************************************************************************
+**  For general Luddy School computing information, please see:               **
+**      http://help.luddy.indiana.edu/                                        **
+**                                                                            **
+**  To submit a problem report or question, please see:                       **
+**      http://help.luddy.indiana.edu/request                                 **
+********************************************************************************
+
+
+[jang27@silo ~]$ mysql -h db.sice.indiana.edu -u i495u20_jang27 -p i495u20_jang27
+Enter password:
+ERROR 1045 (28000): Access denied for user 'i495u20_jang27'@'silo.soic.indiana.edu' (using password: YES)
+[jang27@silo ~]$ mysql -h db.sice.indiana.edu -u i495u20_jang27 -p i495u20_jang27
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 20430
+Server version: 5.5.65-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [i495u20_jang27]> show tables;
++--------------------------+
+| Tables_in_i495u20_jang27 |
++--------------------------+
+| emp_activity             |
++--------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [i495u20_jang27]> create table employee(
+    -> id int auto_increment not null,
+    -> email varchar(50),
+    -> first_name varchar(20) not null,
+    -> last_name varchar(20) not null,
+    -> phone varchar(12),
+    -> admin varchar(50),
+    -> active varchar(2),
+    -> primary key (id),
+    -> foreign key (empid) references emp_activity (empid));
+ERROR 1072 (42000): Key column 'empid' doesn't exist in table
+MariaDB [i495u20_jang27]> describe emp_activity;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| empid      | int(11) | NO   |     | NULL    |       |
+| activityid | int(11) | NO   |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+MariaDB [i495u20_jang27]> create table employee(
+    -> id int auto_increment not null,
+    -> email varchar(50),
+    -> first_name varchar(20) not null,
+    -> last_name varchar(20) not null,
+    -> phone varchar(12),
+    -> admin varchar(50),
+    -> active varchar(2),
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [i495u20_jang27]> create table activity_log(
+    -> id int auto_increment,
+    -> start_datetime datetime not null,
+    -> end_datetime datetime,
+    -> note varchar(100),
+    -> primary key(id)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [i495u20_jang27]> drop table emp_activity;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [i495u20_jang27]> show tables;
++--------------------------+
+| Tables_in_i495u20_jang27 |
++--------------------------+
+| activity_log             |
+| employee                 |
++--------------------------+
+2 rows in set (0.00 sec)
+
+MariaDB [i495u20_jang27]> create table emp_activity(
+    -> empid int not null,
+    -> activityid int not null,
+    -> foreign key(empid) references employee(id),
+    -> foreign key(activityid) references activity_log(id)
+    -> );
+Query OK, 0 rows affected (0.10 sec)
+
+MariaDB [i495u20_jang27]> show tables;
++--------------------------+
+| Tables_in_i495u20_jang27 |
++--------------------------+
+| activity_log             |
+| emp_activity             |
+| employee                 |
++--------------------------+
+3 rows in set (0.00 sec)
+
+MariaDB [i495u20_jang27]> Ctrl-C -- exit!
+Aborted
+[jang27@silo ~]$

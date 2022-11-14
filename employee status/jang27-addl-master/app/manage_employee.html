@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Manage Employee</title>
+<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="resources/css/common.css">
+<style>
+	table {
+		width: 100%;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<!-- Menu bar-->
+	<div class="container">
+		<div class="row">
+			<a style="text-decoration: none; color: black;" href="entry.html">
+				<h1 style="margin-right: 100px; margin-left: 20px;">Time Tracking System</h1>
+			</a>
+			<nav class="nav">
+				<a class="col-xs-1 menu-link" href="create.html">Create Employee</a> <a
+					class="col-xs-1 menu-link" href="manage_employee.html">Manage Employee</a> <a
+					class="col-xs-1 menu-link" href="activity_log_info.html">Activity Log Info</a> <a
+					class="col-xs-1 menu-link" href="select_activity_log.html">Select Activity Log</a>
+			</nav>
+		</div>
+		<hr class="bar"></hr>
+		<!-- In order to store inserted information and manage the employee, -->
+		<!-- I created this as table. The info would go under the each section.-->
+		<!-- only valid date will show. and it can be deleted with no child data.-->
+		
+		<table>
+			<thead>
+				<tr>
+					<th class="table-content">
+						<h4>ID</h4>
+					</th>
+					<th class="table-content">
+						<h4>Email</h4>
+					</th>
+					<th class="table-content">
+						<h4>First Name</h4>
+					</th>
+					<th class="table-content">
+						<h4>Last Name</h4>
+					</th>
+					<th class="table-content">
+						<h4>Phone</h4>
+					</th>
+					<th class="table-content">
+						<h4>Admin</h4>
+					</th>
+					<th class="table-content">
+						<h4>Active</h4>
+					</th>
+					<th class="table-btn-update">
+						<h4>Edit</h4>
+					</th>
+					<th class="table-btn-delete">
+						<h4>Delete</h4>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="employee-list-container">
+			</tbody>
+		</table>
+	</div>
+	
+	<script type="text/javascript" src="resources/util/jquery-3.4.1.min.js"></script>
+	<script src="resources/util/handlebars-v4.1.2.js"></script>
+	<script type="text/javascript" src="resources/js/select.js"></script>
+	
+	<script type="employee-template" id="employeeTemplate">
+		<tr class="employee-tr">
+			<td class="employee-td-id">{{id}}</td>
+			<td class="employee-td-email">{{email}}</td>
+			<td class="employee-td-firstName">{{firstName}}</td>
+			<td class="employee-td-lastName">{{lastName}}</td>
+			<td class="employee-td-phone">{{phone}}</td>
+			<td class="employee-td-admin">{{admin}}</td>
+			<td class="employee-td-active">{{active}}</td>
+			<td><button class="btn-update" onclick="setEditButton(this)">edit</button></td>
+			<td><button class="btn-delete" onclick="setDeleteButton(this)">delete</button></td>
+		</tr>
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Activity Log</title>
+<link rel="stylesheet" href="resources/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="resources/css/common.css">
+<style>
+	table {
+		width: 100%;
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<a style="text-decoration: none; color: black;" href="entry.html">
+				<h1 style="margin-right: 100px; margin-left: 20px;" href="entry.html">Time Tracking System</h1>
+			</a>
+			<nav class="nav">
+            	<a class="col-xs-1 menu-link" href="create.html">Create</a>
+            	<a class="col-xs-1 menu-link" href="manage_employee.html">Manage Employee</a>
+            	<a class="col-xs-1 menu-link" href="activity_log_info.html">Activity Log Info</a>
+        		<a class="col-xs-1 menu-link" href="select_activity_log.html">Select Activity Log</a>
+        	</nav>
+		</div>
+		<hr class="bar"></hr>
+		<div class="row" style="margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+			<select name="employeeName" id="select-employee-name">
+				<option value="">Employee Name</option>
+			</select>
+			<span style="margin-left: 20px; margin-right: 5px;">Email</span>
+			<input id="emailSearchInput" class="input-text-area" size="20">
+			<span style="margin-left: 20px; margin-right: 5px;">StartDate</span>
+			<input id="startDateSearchInput" class="input-text-area" size="20">
+			<span style="margin-left: 20px; margin-right: 5px;">EndDate</span>
+			<input id="endDateSearchInput" class="input-text-area" size="20">
+			
+			<button id="searchButton">search</button>
+		</div>
+		
+		<table>
+			<thead>
+				<tr>
+					<th class="table-content">
+						<h4>Employee Name</h4>
+					</th>
+					<th class="table-content">
+						<h4>Email</h4>
+					</th>
+					<th class="table-content">
+						<h4>Phone</h4>
+					</th>
+					<th class="table-content">
+						<h4>Active</h4>
+					</th>
+					<th class="table-content">
+						<h4>Start Datetime</h4>
+					</th>
+					<th class="table-content">
+						<h4>End Datetime</h4>
+					</th>
+					<th class="table-btn-update">
+						<h4>Edit</h4>
+					</th>
+					<th class="table-btn-delete">
+						<h4>Delete</h4>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="activity-list-container">
+			</tbody>
+		</table>
+	</div>
+	
+	<script type="text/javascript" src="resources/util/jquery-3.4.1.min.js"></script>
+	<script src="resources/util/handlebars-v4.1.2.js"></script>
+	<script type="text/javascript" src="resources/js/search_activity.js"></script>
+	
+	<script type="employee-template" id="employeeSelectTemplate">
+		<option value="{{id}}">{{lastName}} {{firstName}}</option> 
+	</script>
+	
+	<script type="activity-template" id="activityTemplate">
+		<tr class="activity-tr">
+			<td class="activity-id" hidden>{{activityId}}</td>
+			<td class="activity-employee-first-name" hidden>{{firstName}}</td>
+			<td class="activity-employee-last-name" hidden>{{lastName}}</td>
+			<td class="activity-employee-name">{{lastName}} {{firstName}}</td>
+			<td class="activity-employee-email">{{email}}</td>
+			<td class="activity-employee-phone">{{phone}}</td>
+			<td class="activity-employee-active">{{active}}</td>
+			<td class="activity-start-datetime">{{startDatetime}}</td>
+			<td class="activity-end-datetime">{{endDatetime}}</td>
+			<td><button class="btn-update" onclick="setEditButton(this)">edit</button></td>
+			<td><button class="btn-delete" onclick="setDeleteButton(this)">delete</button></td>
+		</tr>
+	</script>
+</body>
+</html>
