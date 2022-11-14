@@ -9,7 +9,7 @@ This repository is for Capstone 2018-19.
 | Team Number | 19 |
 | Team Name | Inviter |
 | Assigned AI | PRGADUGU |
-| Platform | Web |
+| Platform | Web Application |
 | Description | Inviter is a website-base application where people can host or join an event in real-time.  |
 
 ## Team Members
@@ -23,7 +23,7 @@ Team Members
 You can find information on our team, our roles, and our training plan(s) below.
 
 <h3>Jang, SeungChan (jang27)</h3>
-Main Role: Business Analyst & Web developer
+Main Role: Data Analyst & Web developer
 
 <ul>
 <li>Training item 1: Through the CodeAcademy, I will learn HTML 5 in order to program the basic structure of the whole website and SQL to understand storing the database. ({two hours per week})</li>
